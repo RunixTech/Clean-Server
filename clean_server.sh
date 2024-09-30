@@ -1,5 +1,5 @@
 echo -e "Updating Script: \n"
-wget -O /scripts/clean_server.sh <placeholder>
+wget -O /scripts/clean_server.sh https://raw.githubusercontent.com/RunixTech/Clean-Server/refs/heads/main/clean_server.sh
 echo -e "Cleaning Exim Mail Queue: \n"
 exim -bp | grep \< | awk '{print $3}' | xargs exim -Mrm
 echo -e "Cleaning DirectAdmin User Backups: \n"
